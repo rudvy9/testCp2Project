@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Game.h"
 #include "KeyEvent.h"
+#include "Frame.h"
 /*
 using namespace std;
 unsigned int __stdcall mythread(void*)
@@ -32,7 +33,7 @@ unsigned int __stdcall keyEvent(void *)
 	}
 	return 0;
 }
-*/
+
 
 Game * game = new Game();
 
@@ -58,14 +59,11 @@ unsigned int __stdcall keyEvent(void*)
 	return 0;
 }
 
-
+*/
 int main()
 {
-	
-
-	
-
-	HANDLE handleA, handleB;
+/*	
+HANDLE handleA, handleB;
 
 	handleA = (HANDLE)_beginthreadex(0, 0, &mythread, (void*)0, 0, 0);
 	handleB = (HANDLE)_beginthreadex(0, 0, &keyEvent, (void*)0, 0, 0);
@@ -77,5 +75,19 @@ int main()
 	CloseHandle(handleB);
 
 	return 0;
+*/
+	try 
+	{
+		Frame *f1 = new Frame;
+		Frame * f2 = new Frame[10];
+
+		delete f1;
+		delete[] f2;
+	}
+	catch (string msg)
+	{
+		cout << "Error msg :" << msg << endl;
+
+	}
 
 }
